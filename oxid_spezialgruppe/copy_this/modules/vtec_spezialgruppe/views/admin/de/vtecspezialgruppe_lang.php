@@ -7,5 +7,7 @@ $aLang = array(
   'SHOP_MODULE_vtec_spezialgruppe' => 'OXID der Benutzergruppe die alle Artikel sehen dürfen.',
   'VTEC_ADMIN_SPEZIALGRUPPE' => 'Nur in Spezialgruppe?',
   'HELP_VTEC_SPEZIALGRUPPE' => 'Wenn dieser Artikel nur der Benutzergruppe, die im Modul <em>vtec_spezialgruppe</em> angegeben wurde, angezeigt werden darf muss hier die Checkbox aktiviert werden!',
+  'VTEC_BENUTZERGRUPPEN_ID' => 'OXID der Benutzergruppe',
+  
   
   );

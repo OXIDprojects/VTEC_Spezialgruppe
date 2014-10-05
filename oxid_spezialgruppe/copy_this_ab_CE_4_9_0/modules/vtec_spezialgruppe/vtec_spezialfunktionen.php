@@ -8,10 +8,10 @@ function getViewName( $sTable, $iLangId = null, $sShopId = null )
         
         // Benutzergruppe aus Moduleinstellungen auslesen bis CE 4.8.9 !!!
         // ab CE 4.9.0 ist die Funktion oxConfig::getInstance() nicht mehr verfügbar!!
-        $vtec_GruppenID = oxConfig::getInstance()->getConfigParam('vtec_spezialgruppe');
+        /* $vtec_GruppenID = oxConfig::getInstance()->getConfigParam('vtec_spezialgruppe'); */
         
         // Ab CE 4.9.0 gilt dieser Eintrag! Obigen Code bitte auskommentieren!!!
-        /* $vtec_GruppenID = oxRegistry::getConfig()->getConfigParam('vtec_spezialgruppe'); */ 
+        $vtec_GruppenID = oxRegistry::getConfig()->getConfigParam('vtec_spezialgruppe'); 
     
         // Ansicht...
         $sVtecAnsicht = $sTable; 
@@ -33,8 +33,8 @@ function getViewName( $sTable, $iLangId = null, $sShopId = null )
             } 
             if ( $sVtecAnsicht == "oxarticles" )
             {
-                $ox_User_ID = oxSession::getVar("usr");  // bis CE 4.8.9
-                /* $ox_User_ID = oxRegistry::getSession()->getVariable("usr"); */ // ab CE 4.9.0, obigen Code auskommentieren!!
+                /* $ox_User_ID = oxSession::getVar("usr"); */ // bis CE 4.8.9
+                $ox_User_ID = oxRegistry::getSession()->getVariable("usr");   // ab CE 4.9.0
                 $ox_User = oxNew("oxUser");
                 $ox_User->load($ox_User_ID);
                 if ( !$ox_User->isAdmin() )
